@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/vladbashkov/greenes-react/static/css/main.3e2ec67e.css",
+    "main.js": "/vladbashkov/greenes-react/static/js/main.2a9fa9aa.js",
+    "static/media/map.jpg": "/vladbashkov/greenes-react/static/media/map.fe76e3b232bec3a6dcf0.jpg",
+    "static/media/pipes-parallax.jpg": "/vladbashkov/greenes-react/static/media/pipes-parallax.cdb10d8d7a575324031d.jpg",
+    "static/media/ship.svg": "/vladbashkov/greenes-react/static/media/ship.86602a9b76c4a6f1c491.svg",
+    "static/media/earth.svg": "/vladbashkov/greenes-react/static/media/earth.9215c65794d8cff6bb3c.svg",
+    "static/media/house-solid.svg": "/vladbashkov/greenes-react/static/media/house-solid.cba995278ec39e47332de80ac5d841c9.svg",
+    "static/media/truck.svg": "/vladbashkov/greenes-react/static/media/truck.45b0ceaa77a0959b0237.svg",
+    "index.html": "/vladbashkov/greenes-react/index.html",
+    "static/media/print-solid.svg": "/vladbashkov/greenes-react/static/media/print-solid.e123ff45f9c8419df553fa3367055137.svg",
+    "static/media/phone-solid.svg": "/vladbashkov/greenes-react/static/media/phone-solid.9d4fb68eb82a6b4b081f783e71192c7b.svg",
+    "static/media/envelope-solid.svg": "/vladbashkov/greenes-react/static/media/envelope-solid.f705ac388dae37483cb2cbd8228b324f.svg",
+    "static/media/burger-btn.svg": "/vladbashkov/greenes-react/static/media/burger-btn.ec312d4d919ddaf852d7be2369f511d0.svg",
+    "main.3e2ec67e.css.map": "/vladbashkov/greenes-react/static/css/main.3e2ec67e.css.map",
+    "main.2a9fa9aa.js.map": "/vladbashkov/greenes-react/static/js/main.2a9fa9aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e2ec67e.css",
+    "static/js/main.2a9fa9aa.js"
+  ]
+}
