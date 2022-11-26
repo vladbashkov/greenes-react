@@ -1,10 +1,9 @@
 import useAppService from '../../services/AppService';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import './NavMenu.scss';
 
-import Logo from '../../resources/img/greenex-logo.png'
 import Burger from '../../resources/img/burger-btn.svg';
 
 const NavMenu = () => {
@@ -72,11 +71,17 @@ const NavMenu = () => {
                 <li
                     className='nav-li'
                     key={i}
-                    onClick={onToggleMenu}
+                    onClick={ onToggleMenu }
                 >
-                    <a href={li_link}>
-                        {li_text.toUpperCase()}
-                    </a>
+                    <Link 
+                        to={ li_link }
+                        smooth={ true }
+                        offset={ -50 }
+                        duration={ 500 }
+                        onClick={ onToggleMenu }
+                    >
+                        { li_text.toUpperCase() }
+                    </Link>
 
                 </li>
             )
@@ -85,8 +90,14 @@ const NavMenu = () => {
         return (
             <div 
                 className={`nav-menu_container ${menuShrunk}`}
+                id="navMenu"
             >
-                <Link to="/">
+                <Link 
+                    to="heroSection"
+                    smooth={ true }
+                    offset={ 0 }
+                    duration={ 500 }
+                >
                     <img 
                         src={logo_img} 
                         alt={logo_alt} 

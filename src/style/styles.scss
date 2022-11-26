@@ -4,6 +4,7 @@
 
 .App {
     overflow: hidden;
+    scroll-behavior: smooth;
 
     .container {
         max-width: 80%;

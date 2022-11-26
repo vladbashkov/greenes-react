@@ -1,12 +1,13 @@
-import AboutSection from "../AboutSection/AboutSection";
-import ShipParallax from "../ShipParallax/ShipParallax";
-import ServiceSection from "../ServicesSection/ServicesSection";
-import FactoryParallax from "../FactoryParallax/FactoryParallax";
-import LogDistSection from "../LogDistSection/LogDistSection";
-import CranesParallax from "../CranesParallax/CranesParallax";
-import ProductsSection from "../ProductsSection/ProductsSection";
-import PipesParallax from "../PipesParallax/PipesParallax";
-import OfficesSection from "../OfficesSection/OfficesSection";
+import AboutSection from "../Sections/AboutSection/AboutSection";
+import ShipParallax from "../Parallaxes/ShipParallax/ShipParallax";
+import ServiceSection from "../Sections/ServicesSection/ServicesSection";
+import FactoryParallax from "../Parallaxes/FactoryParallax/FactoryParallax";
+import LogDistSection from "../Sections/LogDistSection/LogDistSection";
+import CranesParallax from "../Parallaxes/CranesParallax/CranesParallax";
+import ProductsSection from "../Sections/ProductsSection/ProductsSection";
+import PipesParallax from "../Parallaxes/PipesParallax/PipesParallax";
+import OfficesSection from "../Sections/OfficesSection/OfficesSection";
+import GoToTopButton from "../goToTopButton/goToTopButton";
 
 const MainPage = () => {
     return (
@@ -20,6 +21,7 @@ const MainPage = () => {
             <ProductsSection />
             <PipesParallax />
             <OfficesSection />
+            <GoToTopButton />
         </>
     )
 }

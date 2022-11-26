@@ -1,10 +1,7 @@
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
-import map from '../../../resources/img/map.jpg';
-import house from '../../../resources/img/house-solid.svg';
-import phoneIcon from '../../../resources/img/phone-solid.svg';
-import printIcon from '../../../resources/img/print-solid.svg';
-import envelopIcon from '../../../resources/img/envelope-solid.svg';
+import Map from '../../Map/Map';
 
 const useContent = (content) => {
     let sectionContent = content.map(item => {
@@ -40,14 +37,16 @@ const useContent = (content) => {
             let columns = item.columns.map((el, i) => {
                 const id = Math.floor(Math.random() * (1983852 - 1204954) + 1853450);
                 const { icon, subtitle, text } = el.column;
-                const svgIcon = require(`../../../resources/img/${icon.icon_name}.svg`);
-                // console.log(el);
+                const svgIcon = `https://staging.greenexenergy.com/static/media/${icon.icon_name}.svg`;
 
                 return (
                     <div className="section-column" key={ id }>
                         <div className="column-icon">
-                            <a 
-                                href={ icon.link }
+                            <Link
+                                to={ icon.link }
+                                smooth={ true }
+                                offset={ -50 }
+                                duration={ 500 }
                                 className="icon-link"
                             >
                                 <img 
@@ -55,7 +54,7 @@ const useContent = (content) => {
                                     alt={icon.icon_name} 
                                     className="icon"
                                 />
-                            </a>
+                            </Link>
                         </div>
                         <h4 className="column-subtitle">
                             { subtitle }
@@ -75,9 +74,15 @@ const useContent = (content) => {
             
             return (
                 <div className='button-container' key={id}>
-                    <a href={ link } className="column-button">
+                    <Link 
+                        to={ link } 
+                        smooth={ true }
+                        offset={ -50 }
+                        duration={ 500 }
+                        className="column-button"
+                    >
                         { text.toUpperCase() }
-                    </a>
+                    </Link>
                 </div>
             )
 
@@ -91,12 +96,12 @@ const useContent = (content) => {
 
                     if(el.text == 'Base Oils') {
                         return (
-                            <NavLink 
+                            <NavLink
                                 end
                                 to="/base-oil-products" 
                                 className="column-item item-link" 
                                 key={id+i}
-                                >
+                            >
                                 { el.text }
                             </NavLink>
                         )
@@ -126,31 +131,41 @@ const useContent = (content) => {
             const id = Math.floor(Math.random() * (1983852 - 1204954) + 1853450);
 
             return (
-                <img src={ map } alt={ item.map.alt } key={ id } className="column-map" />
+                
+                    <div className='map-container'>
+                        <Map data={ item.map } />
+                    </div>
+                    /* <img src={ item.map.link } alt={ item.map.alt } key={ id } className="column-map" /> */
+                
             )
         } else if(item.offices) {
             const id = Math.floor(Math.random() * (1983852 - 1204954) + 1853450);
+            const houseIcon = 'house',
+                  phoneIcon = 'phone',
+                  printIcon = 'print',
+                  emailIcon = 'email';
+                  
 
             let offices = item.offices.map((el, i) => {
                 let phone, fax, email;
 
                 if(el.phone) {
                     phone = <a href={ `tel:${el.phone}` } className="column-link">
-                                <img src={ phoneIcon } alt="Fax icon" className="icon" />
+                                <img src={ `https://staging.greenexenergy.com/static/media/${phoneIcon}.svg` } alt="Phone icon" className="icon" />
                                 { el.phone }
                             </a>;
                 }
 
                 if(el.fax) {
                     fax = <a href={ `tel:${el.fax}` } className="column-link">
-                                <img src={ printIcon } alt="Fax icon" className="icon" />
+                                <img src={ `https://staging.greenexenergy.com/static/media/${printIcon}.svg` } alt="Print icon" className="icon" />
                                 { el.fax }
                             </a>;
                 }
 
                 if(el.email) {
                     email = <a href={ `mailto:${el.email}` } className="column-link">
-                                <img src={ envelopIcon } alt="Email icon" className="icon" />
+                                <img src={ `https://staging.greenexenergy.com/static/media/${emailIcon}.svg` } alt="Email icon" className="icon" />
                                 { el.email }
                             </a>;
                 }
@@ -166,7 +181,7 @@ const useContent = (content) => {
                             </em>
                         </p>
                         <p className="column-adress">
-                            <img src={ house } alt="House icon" className="icon" />
+                            <img src={ `https://staging.greenexenergy.com/static/media/${houseIcon}.svg` } alt="House icon" className="icon" />
                             { el.adress }
                         </p>
                         { phone }

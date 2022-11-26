@@ -63,6 +63,7 @@ const useAppService = () => {
                 res.push(
                     {
                         "sectionTitle": item[contentType].section_title,
+                        "id": item[contentType].id,
                         "content": _transforSection(item[contentType].section)
                     }
                 )

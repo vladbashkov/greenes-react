@@ -1,4 +1,4 @@
-import OilProductsSection from "../OilProductsSection/OilProductsSection";
+import OilProductsSection from "../Sections/OilProductsSection/OilProductsSection";
 
 const BaseProductOils = () => {
     return (
