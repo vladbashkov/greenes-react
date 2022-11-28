@@ -16,7 +16,6 @@ const FooterSection = () => {
     const onRequest = () => {
 
         getResource('footer')
-            // .then(console.log)
             .then(onLoaded)
     }
 

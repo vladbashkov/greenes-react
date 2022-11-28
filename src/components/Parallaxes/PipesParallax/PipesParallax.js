@@ -5,18 +5,15 @@ import useParallax from '../../hooks/useParallax/useParallax';
 const PipesParallax = () => {
     const [state, setState] = useState({});
 
-    const { getData, getContentSection } = useAppService();
+    const { getContentSection } = useAppService();
 
     useEffect(() => {
         onRequest();
     }, []);
 
     const onRequest = () => {
-        // const pipesParallax = getData('pipesParallax');
-        // onLoaded(pipesParallax);
 
         getContentSection('pipes')
-            // .then(console.log)
             .then(onLoaded)
     }
 

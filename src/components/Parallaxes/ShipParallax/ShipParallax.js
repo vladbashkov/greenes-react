@@ -15,7 +15,6 @@ const ShipParallax = () => {
 
         getContentSection('Ship Parallax')
             .then(onLoaded)
-            // .then(el => console.log(el))
     }
 
     const onLoaded = (value) => {

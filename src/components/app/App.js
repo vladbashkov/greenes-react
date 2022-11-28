@@ -24,7 +24,7 @@ const App = () => {
             <Route path="*" element={ <Page404/> } />
           </Routes>
         </main>
-        <footer>
+        <footer className="App-footer">
           <FooterSection />
         </footer>
       </div>

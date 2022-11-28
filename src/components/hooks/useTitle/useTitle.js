@@ -1,5 +1,5 @@
 const useTitle = (title) => {
-    let Title = ''
+    let Title = '';
 
     if(title == 'products') {
         Title = 'PRODUCTS RANGE';

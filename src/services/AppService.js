@@ -2,7 +2,7 @@ import data from "../server/data.json";
 
 const useAppService = () => {
     const _apiBase = data;
-    const _apiData = 'https://staging.greenexenergy.com/wp-json/wp/v2/pages';
+    const _apiData = 'https://greenexenergy.com/wp-json/wp/v2/pages';
 
     const getResource = async route => {
         let res = await fetch(_apiData);
@@ -27,20 +27,15 @@ const useAppService = () => {
     }
 
     const _transformData = (data, route) => {
-        // console.log(data[0].acf);
         return data[0].acf[route];
     }
 
     const _transformContentSection = (data, route) => {
-        // console.log('tansform content section');
-        // console.log(route);
-        // console.log(data[0].acf.content_section);
         
         let contentSection = data[0].acf.content_section;
         
         let res = contentSection.reduce((res, item) => {
             let contentType = item.content_type;
-            // console.log(contentType);
 
             if(item.content_type == 'parallax' && item[contentType].section_title == route) {
 
@@ -55,10 +50,6 @@ const useAppService = () => {
             }
 
             if(item[contentType].section_title == route) {
-                // console.log('item[contentType].section_title == route');
-                // console.log(item);
-                // console.log(item[contentType].section);
-
 
                 res.push(
                     {
@@ -68,27 +59,20 @@ const useAppService = () => {
                     }
                 )
 
-                // console.log(res);
-
                 return res;
             }
 
             return res;
         }, []);
 
-        // console.log(res);
         return res[0];
     }
 
     const _transforSection = (section) => {
         let content = [];
-        // console.log('section');
-        // console.log(section);
 
         let res = section.map(el => {
             let contentType = el.content_type;
-            // console.log('_transforSection')
-            // console.log(contentType);
 
             return content.push(
                 {
@@ -97,8 +81,6 @@ const useAppService = () => {
             );
         })
 
-        // console.log('content');
-        // console.log(content);
         return content;
     }
 

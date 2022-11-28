@@ -18,7 +18,6 @@ const OfficesSection = () => {
 
     const onRequest = () => {
         getContentSection('offices')
-            // .then(console.log)
             .then(onLoaded)
     }
 

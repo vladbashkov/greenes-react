@@ -135,7 +135,6 @@ const useContent = (content) => {
                     <div className='map-container'>
                         <Map data={ item.map } />
                     </div>
-                    /* <img src={ item.map.link } alt={ item.map.alt } key={ id } className="column-map" /> */
                 
             )
         } else if(item.offices) {

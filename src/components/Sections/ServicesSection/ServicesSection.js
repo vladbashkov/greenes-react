@@ -18,7 +18,6 @@ const ServiceSection = () => {
 
     const onRequest = () => {
         getContentSection('Services')
-            // .then(console.log)
             .then(onLoaded)
     }
 

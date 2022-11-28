@@ -23,7 +23,6 @@ const Map = () => {
     const onRequest = () => {
         getContentSection('offices')
             .then(el => onDataLoaded(el.content[0].map))
-            // .then(el => console.log(el.content[0]))
     }
 
     const onDataLoaded = (value) => {
