@@ -2,8 +2,6 @@ import useAppService from '../../../services/AppService';
 import { useState, useEffect } from 'react';
 import useSection from '../../hooks/useSection/useSection';
 
-import './AboutSection.scss';
-
 const AboutSection = () => {
     const [state, setState] = useState({}),
           [content, setContent] = useState([]),
